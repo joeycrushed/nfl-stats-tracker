@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react'
+import { useHistory } from 'react-router-dom'
 import './TeamCard.css'
 import axios from 'axios'
 import requests from './Requests'
 
 function TeamCard() {
+    const history = useHistory()
     const url = requests.allTeams
     const [team, setTeam] = useState(null)
   
@@ -16,9 +18,10 @@ function TeamCard() {
   
   if (team) {
     return (
-      <div className="teamCard__Container">
+      <div className="teamCard__Container" >
           {team.teams.map(nfl =>
-          <div className="teamCard">
+          <div key={nfl.idTeam.id} className="teamCard" onClick={() => history.push("/teamstatistics")}>
+          
                 <h4>{nfl.strTeam}</h4>
                 <img src={nfl.strTeamBadge} alt="" />            
           </div> 
