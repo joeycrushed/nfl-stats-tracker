@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import './TeamCard.css'
 import axios from 'axios'
+import requests from './Requests'
 
 function TeamCard() {
-    const url = "https://www.thesportsdb.com/api/v1/json/1/lookup_all_teams.php?id=4391"
+    const url = requests.allTeams
     const [team, setTeam] = useState(null)
   
   useEffect(() => {
@@ -15,7 +16,7 @@ function TeamCard() {
   
   if (team) {
     return (
-      <div>
+      <div className="teamCard__Container">
           {team.teams.map(nfl =>
           <div className="teamCard">
                 <h4>{nfl.strTeam}</h4>
