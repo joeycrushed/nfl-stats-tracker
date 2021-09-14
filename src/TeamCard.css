@@ -1,0 +1,15 @@
+.teamCard {
+    height: 250px;
+    width: 250px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+}
+
+.teamCard > img {
+    height: 150px;
+    object-fit: contain;
+}
