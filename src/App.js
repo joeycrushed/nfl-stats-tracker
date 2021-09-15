@@ -16,7 +16,7 @@ function App() {
         <Route path="/">
           <div className="App">
           <h1>NFL Team Stats</h1>
-          <div class="teamsContainer"></div>
+          <div className="teamsContainer"></div>
             <TeamCard/>
           </div>
         </Route>

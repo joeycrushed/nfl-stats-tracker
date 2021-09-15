@@ -20,7 +20,7 @@ function TeamCard() {
     return (
       <div className="teamCard__Container" >
           {team.teams.map(nfl =>
-          <div key={nfl.idTeam.id} className="teamCard" onClick={() => history.push("/teamstatistics")}>
+          <div key={nfl.idTeam} className="teamCard" onClick={() => history.push("/teamstatistics")}>
           
                 <h4>{nfl.strTeam}</h4>
                 <img src={nfl.strTeamBadge} alt="" />            
