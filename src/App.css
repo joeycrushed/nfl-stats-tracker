@@ -4,3 +4,9 @@
   color: white;
   text-align: center;
 }
+
+.teamCard__Container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

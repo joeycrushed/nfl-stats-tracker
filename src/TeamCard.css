@@ -13,12 +13,6 @@
     cursor: pointer;
 }
 
-.teamCard__Container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
 .teamCard > img {
     margin-top: 18px;
     height: 100px;
