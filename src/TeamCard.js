@@ -16,17 +16,16 @@ function TeamCard() {
       setTeam(response.data)
     })
   }, [url])
-  
+
   if (team) {
     return (
       <div className="teamCard__Container" >
-          {team.teams.map(nfl =>
-            <Link to={`/teams/${nfl.idTeam}`}>
+          {team.teams.map((nfl, index) =>
+            <Link to={`/teams/${index}`}>
           <div key={nfl.idTeam} className="teamCard">  
             
                 <h4>{nfl.strTeam}</h4>
                 <img src={nfl.strTeamBadge} alt="" />
-                 
           </div> 
           </Link>   
           )}
