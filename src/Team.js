@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react'
-import { useParams, Link } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import axios from 'axios'
 import requests from './Requests'
+import Button from '@mui/material/Button';
+import Grid from '@mui/material/Grid';
+
 
 
 function Team() {
@@ -18,14 +21,18 @@ function Team() {
    
     if (teamData) {
     return (
+      <Grid container spacing={2}>
+      
         <div className="TeamInfo">
-            <h1>{teamData.teams[`${id}`].strTeam}</h1>
+        <Grid item xs={8}><h1>{teamData.teams[`${id}`].strTeam}</h1></Grid>
+            
             <p>{teamData.teams[`${id}`].strTeamShort}</p>
             <p>Formed in {teamData.teams[`${id}`].intFormedYear}</p>
             <h2>Description</h2>
             <p>Formed in {teamData.teams[`${id}`].strDescriptionEN}</p>
-            <button>Go Back</button>
+            <Button variant="contained">Go BACK</Button>
         </div>
+      </Grid>
     )
 }
 return (
