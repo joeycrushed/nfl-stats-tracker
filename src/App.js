@@ -2,7 +2,7 @@ import React from 'react';
 import TeamCard from './TeamCard';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import './App.css'
-import Team from './Team';
+import TeamInfo from './TeamInfo';
 
 function App() {
 
@@ -12,7 +12,7 @@ function App() {
 
         <Route path="/" exact >
           <div className="App">
-          <h1>NFL Team Stats</h1>
+          <img src="https://assets.stickpng.com/images/5895deb9cba9841eabab6099.png" style={{height: "100px" }}alt="" />
             <div className="teamCard__Container">
                 <TeamCard/>
             </div>
@@ -20,7 +20,7 @@ function App() {
         </Route>
 
         <Route path="/teams/:id" exact>
-          <Team />
+          <TeamInfo />
         </Route>
 
       </Switch>
