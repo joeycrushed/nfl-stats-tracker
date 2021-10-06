@@ -1,16 +1,20 @@
 import React, { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, useHistory, Link } from 'react-router-dom'
 import axios from 'axios'
 import requests from './Requests'
 import Button from '@mui/material/Button';
 import Grid from "@material-ui/core/Grid";
 import Card from "@material-ui/core/Card";
 import Box from '@material-ui/core/Box';
+import Container from '@material-ui/core/Container'
 
 function Team() {
+
     const url = requests.allTeams
     const [teamData, setTeamData] = useState(null)
     const { id } = useParams()
+    const history = useHistory()
+    
 
   useEffect(() => {
     axios.get(url)
@@ -45,17 +49,42 @@ function Team() {
               </Card>
             </Box>
           </Grid>
-          <Grid container item xs={12} justify="center">
-            <Button variant="contained">Go BACK</Button>
+          <Grid item xs={4} justify="center">
+            <Box m={3}>
+              <Card variant="outlined">
+                <Box p={4}>
+                  <a href={`https://` + teamData.teams[`${id}`].strTwitter}
+                    target='_blank'
+                    rel="noopener noreferrer">
+                      <p>{teamData.teams[`${id}`].strTwitter}</p>
+                </a>
+                <a href={`https://` + teamData.teams[`${id}`].strFacebook}
+                    target='_blank'
+                    rel="noopener noreferrer">
+                      <p>{teamData.teams[`${id}`].strFacebook}</p>
+                </a>
+                <a href={`https://` + teamData.teams[`${id}`].strInstagram}
+                    target='_blank'
+                    rel="noopener noreferrer">
+                      <p>{teamData.teams[`${id}`].strInstagram}</p>
+                </a>
+                </Box>
+              </Card>
+            </Box>
           </Grid>
-        </Grid>
-          
+          <Grid container item xs={12} justify="center">
+            <Button onClick={history.goBack} variant="contained">Go BACK</Button>
+          </Grid>
+        </Grid>       
         </div>
 
     )
 }
 return (
-    <h1>There's nowt here!</h1>
+  <Container>
+    <h4>Loading ...</h4>
+  </Container>
+    
 )
 }
 

@@ -11,6 +11,16 @@
     margin: 50px;
     color: black;
     cursor: pointer;
+    transition: 0.5s;
+}
+
+.teamCard__Container a {
+    text-decoration: none;
+}
+
+.teamCard:hover {
+    scale: 1.05;
+    transition: 0.5s;
 }
 
 .teamCard > img {

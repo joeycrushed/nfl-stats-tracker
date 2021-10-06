@@ -22,8 +22,7 @@ function TeamCard() {
       <div className="teamCard__Container" >
           {team.teams.map((nfl, index) =>
             <Link to={`/teams/${index}`}>
-          <div key={nfl.idTeam} className="teamCard">  
-            
+          <div key={nfl.idTeam} className="teamCard">     
                 <h4>{nfl.strTeam}</h4>
                 <img src={nfl.strTeamBadge} alt="" />
           </div> 
@@ -37,7 +36,7 @@ function TeamCard() {
   
     return (
       <div >  
-      <p>it's not working</p>
+      <p>Failed to load</p>
       </div>
     );
 }
