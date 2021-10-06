@@ -8,7 +8,7 @@ function TeamPictures(props) {
     const team = props.data.teams[id]
 
     return (
-        <div>
+        <div className="teamJersey">
             <Box p={2}><img src={team.strTeamJersey} alt="" /></Box>
         </div>
     )
