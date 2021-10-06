@@ -1,6 +1,5 @@
 import React from 'react'
 import { useParams } from 'react-router'
-import Card from '@material-ui/core/Card'
 import Box from '@material-ui/core/Box'
 
 
@@ -10,7 +9,6 @@ function SocialLinks(props) {
 
     return (
         <div>
-            <Card variant="outlined">
                 <Box p={4}>
                   <a href={`https://` + team.strTwitter}
                     target='_blank'
@@ -28,7 +26,6 @@ function SocialLinks(props) {
                       <p>{team.strInstagram}</p>
                 </a>
                 </Box>
-            </Card>
         </div>
     )
 }

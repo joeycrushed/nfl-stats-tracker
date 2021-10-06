@@ -10,3 +10,7 @@
   flex-wrap: wrap;
   justify-content: center;
 }
+
+.jersey {
+  height: 400px;
+}
